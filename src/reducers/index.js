@@ -9,7 +9,7 @@ const initialState = {
 
 export const hotColdReducer = (state = initialState, action) => {
   if (action.type === ADD_GUESS) {
-    let guess = parseInt(action.guesses);
+    let guess = parseInt(action.guesses, 10);
     if (isNaN(guess)) {
       Object.assign({}, state, {
         feedback: 'Please enter a valid number'

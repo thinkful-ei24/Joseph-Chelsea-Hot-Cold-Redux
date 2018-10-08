@@ -5,7 +5,6 @@ import GuessForm from './guess-form';
 import store from '../store';
 
 export default function GuessSection(props) {
-  const { feedback, guessCount } = props;
   return (
     <section aria-label="Guess section" aria-describedby="feedback">
       <Feedback
