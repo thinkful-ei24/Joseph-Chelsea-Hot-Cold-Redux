@@ -3,16 +3,17 @@ import React from 'react';
 import GuessList from './guess-list';
 import GuessCount from './guess-count';
 import AuralStatus from './aural-status';
+import store from '../store';
 
 export default function StatusSection(props) {
-  const { guesses, auralStatus } = props;
-  const guessCount = guesses.length;
+  // const { guesses, auralStatus } = props;
+  // const guessCount = guesses.length;
 
   return (
     <section aria-labelledby="guessCount" aria-describedby="guessList">
-      <GuessCount guessCount={guessCount} />
-      <GuessList guesses={guesses} />
-      <AuralStatus auralStatus={auralStatus} />
+      <GuessCount guessCount={store.getState().guesses.length} />
+      <GuessList guesses={store.getState().guesses} />
+      <AuralStatus auralStatus={store.getState().auralStatus} />
     </section>
   );
 }

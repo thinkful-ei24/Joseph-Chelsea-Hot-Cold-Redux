@@ -4,8 +4,7 @@ export const addGuess = guesses => ({
   guesses
 });
 
-export const CHANGE_FEEDBACK = 'CHANGE_FEEDBACK';
-export const changeFeedback = feedback => ({
-  type: CHANGE_FEEDBACK,
-  feedback
+export const RESET_GAME = 'RESET_GAME';
+export const resetGame = () => ({
+  type: RESET_GAME
 });

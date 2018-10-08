@@ -1,17 +1,15 @@
 import React from 'react';
 
 import './top-nav.css';
+import store from '../store';
+import { resetGame } from '../actions';
 
 export default function TopNav(props) {
   return (
     <nav>
       <ul className="clearfix">
         <li>
-          <a 
-            href="#what" 
-            className="what"
-            aria-label="How to play"
-          >
+          <a href="#what" className="what" aria-label="How to play">
             What?
           </a>
         </li>
@@ -20,7 +18,7 @@ export default function TopNav(props) {
             href="#feedback"
             className="new"
             aria-label="Start a new game"
-            onClick={() => props.onRestartGame()}
+            onClick={() => store.dispatch(resetGame())}
           >
             + New Game
           </a>

@@ -10,7 +10,7 @@ import './index.css';
 
 import Game from './components/game';
 
-store.dispatch(addGuess(10));
+// store.dispatch(addGuess(10));
 
 ReactDOM.render(
   <Provider store={store}>
