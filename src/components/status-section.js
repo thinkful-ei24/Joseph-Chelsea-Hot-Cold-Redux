@@ -6,9 +6,6 @@ import AuralStatus from './aural-status';
 import store from '../store';
 
 export default function StatusSection(props) {
-  // const { guesses, auralStatus } = props;
-  // const guessCount = guesses.length;
-
   return (
     <section aria-labelledby="guessCount" aria-describedby="guessList">
       <GuessCount guessCount={store.getState().guesses.length} />
